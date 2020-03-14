@@ -1,7 +1,11 @@
 #include <iostream>
-#include "../cwrapper/include/cwrapper.h"
+#include "../cpplib/include/cpplib.h"
+#include "../clib/include/hello.h"
 
 int main() {
-  std::cout << cwrapperfive();
+  std::cout << cwrapperfive() << std::endl;
+
+  std::cout << Say() << std::endl;
+
   return 0;
 }

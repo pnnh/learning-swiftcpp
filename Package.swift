@@ -4,20 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "untitled4",
+    name: "swiftcpp",
     products: [
         .executable(name: "swift-exec", targets: ["swift-exec"] ),
     ],
     targets: [
-        .target(
-                name: "cpp-exec",
-                dependencies: ["cwrapper"]),
-        .target(
-                name: "cwrapper",
-                dependencies: [ ]),
-        .target(
-            name: "swift-exec", 
-            dependencies: ["cwrapper"]),
+        .target(name: "clib", dependencies: []),
+        .target(name: "cpplib", dependencies: []),
+        .target(name: "cpp-exec", dependencies: ["clib", "cpplib"]),
+        .target(name: "swift-exec", dependencies: ["clib", "cpplib"]),
     ],
     cLanguageStandard: .c11,
     cxxLanguageStandard: .cxx11
