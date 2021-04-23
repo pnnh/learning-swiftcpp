@@ -1,15 +1,7 @@
 #include "include/cpplib.h"
 #include <iostream>
 
-namespace cwrapper {
-
-int sex() {
-  std::cout << 60;
-  return 60;
-}
-
-}
-
-int cwrapperfive() {
-  return cwrapper::sex();
+const char* HelloFromCpp() {
+  std::cout << "Hello from cpp" << std::endl;
+  return "Return from cpp";
 }

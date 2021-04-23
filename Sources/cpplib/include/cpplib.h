@@ -2,7 +2,7 @@
 extern "C"  {
 #endif
 
-int cwrapperfive();
+const char* HelloFromCpp();
 
 #ifdef __cplusplus
 }

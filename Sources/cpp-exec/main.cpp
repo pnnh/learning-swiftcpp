@@ -3,9 +3,9 @@
 #include "../clib/include/hello.h"
 
 int main() {
-  std::cout << cwrapperfive() << std::endl;
+  std::cout << HelloFromC() << std::endl;
 
-  std::cout << Say() << std::endl;
+  std::cout << HelloFromCpp() << std::endl;
 
   return 0;
 }

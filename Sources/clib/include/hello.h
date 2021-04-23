@@ -9,7 +9,7 @@
 extern "C"  {
 #endif
 
-int Say(void);
+char* HelloFromC();
 
 #ifdef __cplusplus
 }

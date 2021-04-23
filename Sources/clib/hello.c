@@ -5,8 +5,10 @@
 //  Copyright © 2019 larry. All rights reserved.
 //
 
+#include <printf.h>
 #include "include/hello.h"
 
-int Say() {
-    return 5;
+char* HelloFromC() {
+  printf("Hello from c\n");
+  return "Return from c\n";
 }

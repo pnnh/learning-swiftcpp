@@ -11,9 +11,11 @@ let package = Package(
     targets: [
         .target(name: "clib", dependencies: []),
         .target(name: "cpplib", dependencies: []),
+        .target(name: "swiftlib", dependencies: []),
+        .target(name: "c-exec", dependencies: ["clib", "cpplib"]),
         .target(name: "cpp-exec", dependencies: ["clib", "cpplib"]),
-        .target(name: "swift-exec", dependencies: ["clib", "cpplib"]),
+        .target(name: "swift-exec", dependencies: ["clib", "cpplib", "swiftlib"]),
     ],
     cLanguageStandard: .c11,
-    cxxLanguageStandard: .cxx11
+    cxxLanguageStandard: .cxx14
 )
